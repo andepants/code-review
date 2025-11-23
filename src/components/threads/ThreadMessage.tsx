@@ -11,6 +11,14 @@ interface ThreadMessageProps {
 
 export function ThreadMessage({ message }: ThreadMessageProps) {
   const isUser = message.role === 'user';
+  const isStreaming = !isUser && message.metadata?.streamComplete === false;
+
+  // Debug logging for streaming
+  React.useEffect(() => {
+    if (isStreaming) {
+      console.log('[ThreadMessage] Re-render during streaming, content length:', message.content.length);
+    }
+  }, [message.content, isStreaming]);
 
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
@@ -64,6 +72,13 @@ export function ThreadMessage({ message }: ThreadMessageProps) {
             >
               {message.content}
             </ReactMarkdown>
+            {isStreaming && (
+              <span className="inline-flex ml-1 gap-1 items-center">
+                <span className="w-1.5 h-1.5 bg-accent-primary rounded-full animate-pulse" style={{ animationDelay: '0ms' }}></span>
+                <span className="w-1.5 h-1.5 bg-accent-primary rounded-full animate-pulse" style={{ animationDelay: '150ms' }}></span>
+                <span className="w-1.5 h-1.5 bg-accent-primary rounded-full animate-pulse" style={{ animationDelay: '300ms' }}></span>
+              </span>
+            )}
           </div>
         )}
         <div data-testid="message-timestamp" className="text-xs mt-1 opacity-70">
