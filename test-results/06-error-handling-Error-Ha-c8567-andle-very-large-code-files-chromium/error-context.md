@@ -1,0 +1,157 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 87 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active]
+            - textbox [ref=e19]
+            - generic [ref=e21]:
+              - generic [ref=e23]: "38"
+              - generic [ref=e25]: "39"
+              - generic [ref=e27]: "40"
+              - generic [ref=e29]: "41"
+              - generic [ref=e31]: "42"
+              - generic [ref=e33]: "43"
+              - generic [ref=e35]: "44"
+              - generic [ref=e37]: "45"
+              - generic [ref=e39]: "46"
+              - generic [ref=e41]: "47"
+              - generic [ref=e43]: "48"
+              - generic [ref=e45]: "49"
+              - generic [ref=e47]: "50"
+              - generic [ref=e49]: "51"
+              - generic [ref=e51]: "52"
+              - generic [ref=e53]: "53"
+              - generic [ref=e55]: "54"
+              - generic [ref=e57]: "55"
+              - generic [ref=e59]: "56"
+              - generic [ref=e61]: "69"
+              - generic [ref=e63]: "57"
+              - generic [ref=e65]: "58"
+              - generic [ref=e67]: "59"
+              - generic [ref=e69]: "68"
+              - generic [ref=e71]: "60"
+              - generic [ref=e73]: "61"
+              - generic [ref=e75]: "62"
+              - generic [ref=e77]: "67"
+              - generic [ref=e79]: "63"
+              - generic [ref=e81]: "64"
+              - generic [ref=e84]: "65"
+              - generic [ref=e86]: "66"
+              - generic [ref=e88]: "70"
+            - generic [ref=e192]:
+              - generic [ref=e194]: return true;
+              - generic [ref=e196]: "}"
+              - generic [ref=e198]: "function test() {"
+              - generic [ref=e200]: return true;
+              - generic [ref=e202]: "}"
+              - generic [ref=e204]: "function test() {"
+              - generic [ref=e206]: return true;
+              - generic [ref=e208]: "}"
+              - generic [ref=e210]: "function test() {"
+              - generic [ref=e212]: return true;
+              - generic [ref=e214]: "}"
+              - generic [ref=e216]: "function test() {"
+              - generic [ref=e218]: return true;
+              - generic [ref=e220]: "}"
+              - generic [ref=e222]: "function test() {"
+              - generic [ref=e224]: return true;
+              - generic [ref=e226]: "}"
+              - generic [ref=e228]: "function test() {"
+              - generic [ref=e230]: return true;
+              - generic [ref=e232]: "}"
+              - generic [ref=e234]: "}"
+              - generic [ref=e236]: "function test() {"
+              - generic [ref=e238]: return true;
+              - generic [ref=e240]: "}"
+              - generic [ref=e242]: "}"
+              - generic [ref=e244]: "function test() {"
+              - generic [ref=e246]: return true;
+              - generic [ref=e248]: "}"
+              - generic [ref=e250]: "}"
+              - generic [ref=e252]: "function test() {"
+              - generic [ref=e254]: r
+              - generic [ref=e256]: "}"
+              - generic [ref=e258]: "}"
+          - listbox "Suggest" [ref=e274]:
+            - generic [ref=e275]:
+              - listitem "removeEventListener, Function" [ref=e276] [cursor=pointer]:
+                - generic [ref=e278]:
+                  - generic [ref=e279]: 
+                  - generic [ref=e285]: removeEventListener
+              - listitem "reportError, Function" [ref=e287] [cursor=pointer]:
+                - generic [ref=e289]:
+                  - generic [ref=e290]: 
+                  - generic [ref=e296]: reportError
+              - listitem "requestAnimationFrame, Function" [ref=e297] [cursor=pointer]:
+                - generic [ref=e299]:
+                  - generic [ref=e300]: 
+                  - generic [ref=e306]: requestAnimationFrame
+              - listitem "requestIdleCallback, Function" [ref=e307] [cursor=pointer]:
+                - generic [ref=e309]:
+                  - generic [ref=e310]: 
+                  - generic [ref=e316]: requestIdleCallback
+              - listitem "resizeBy, Function" [ref=e317] [cursor=pointer]:
+                - generic [ref=e319]:
+                  - generic [ref=e320]: 
+                  - generic [ref=e326]: resizeBy
+              - listitem "resizeTo, Function" [ref=e327] [cursor=pointer]:
+                - generic [ref=e329]:
+                  - generic [ref=e330]: 
+                  - generic [ref=e336]: resizeTo
+              - listitem "return, Keyword" [ref=e337] [cursor=pointer]:
+                - generic [ref=e339]:
+                  - generic [ref=e340]: 
+                  - generic [ref=e346]: return
+              - listitem "releaseEvents, Function" [ref=e347] [cursor=pointer]:
+                - generic [ref=e349]:
+                  - generic [ref=e350]: 
+                  - generic [ref=e355]: releaseEvents
+              - listitem "ReadableByteStreamController, Variable" [ref=e356] [cursor=pointer]:
+                - generic [ref=e358]:
+                  - generic [ref=e359]: 
+                  - generic [ref=e365]: ReadableByteStreamController
+              - listitem "ReadableStream, Variable" [ref=e366] [cursor=pointer]:
+                - generic [ref=e368]:
+                  - generic [ref=e369]: 
+                  - generic [ref=e375]: ReadableStream
+              - listitem "ReadableStreamBYOBReader, Variable" [ref=e376] [cursor=pointer]:
+                - generic [ref=e378]:
+                  - generic [ref=e379]: 
+                  - generic [ref=e385]: ReadableStreamBYOBReader
+              - listitem "ReadableStreamBYOBRequest, Variable" [ref=e386] [cursor=pointer]:
+                - generic [ref=e388]:
+                  - generic [ref=e389]: 
+                  - generic [ref=e395]: ReadableStreamBYOBRequest
+      - generic [ref=e399]:
+        - generic [ref=e400]:
+          - heading "Threads (0)" [level=2] [ref=e401]
+          - combobox [ref=e402]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e406]: No threads yet
+  - generic [ref=e407]:
+    - alert
+    - alert
+```

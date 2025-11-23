@@ -1,0 +1,122 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 17 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content": "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } return total; } const cart = [ { name: 'Apple', price: 1.5, quantity: 3 }, { name: 'Banana', price: 0.8, quantity: 5 }, ]; console.log(calculateTotal(cart)); ] } }"
+            - generic [ref=e20]:
+              - generic [ref=e21]:
+                - generic [ref=e22] [cursor=pointer]: 
+                - generic [ref=e24]: "1"
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: 
+                - generic [ref=e28]: "2"
+              - generic [ref=e29]:
+                - generic [ref=e30] [cursor=pointer]: 
+                - generic [ref=e32]: "3"
+              - generic [ref=e35]: "4"
+              - generic [ref=e36]:
+                - generic [ref=e37] [cursor=pointer]: 
+                - generic [ref=e39]: "5"
+              - generic [ref=e42]: "6"
+              - generic [ref=e45]: "7"
+              - generic [ref=e48]: "8"
+              - generic [ref=e49]:
+                - generic [ref=e50] [cursor=pointer]: 
+                - generic [ref=e52]: "9"
+              - generic [ref=e53]:
+                - generic [ref=e54] [cursor=pointer]: 
+                - generic [ref=e56]: "10"
+              - generic [ref=e57]:
+                - generic [ref=e58] [cursor=pointer]: 
+                - generic [ref=e60]: "15"
+              - generic [ref=e63]: "16"
+              - generic [ref=e66]: "11"
+              - generic [ref=e69]: "12"
+              - generic [ref=e72]: "13"
+              - generic [ref=e75]: "14"
+              - generic [ref=e79]: "17"
+            - generic [ref=e80]:
+              - img [ref=e83]
+              - img [ref=e92]
+              - img [ref=e107]
+              - img [ref=e131]
+              - img [ref=e155]
+              - img [ref=e168]
+              - img [ref=e182]
+              - img [ref=e191]
+              - img [ref=e201]
+              - img [ref=e218]
+              - img [ref=e225]
+              - img [ref=e237]
+              - img [ref=e258]
+              - img [ref=e277]
+              - img [ref=e289]
+              - generic [ref=e290]:
+                - generic [ref=e292]: "function calculateTotal(items) {"
+                - generic [ref=e294]: let total = 0;
+                - generic [ref=e296]: "for (let i = 0; i < items.length; i++) {"
+                - generic [ref=e298]: total += items[i].price * items[i].quantity;
+                - generic [ref=e300]: "}"
+                - generic [ref=e302]: return total;
+                - generic [ref=e304]: "}"
+                - generic [ref=e307]: const cart = [
+                - generic [ref=e309]: "{ name: 'Apple', price: 1.5, quantity: 3 },"
+                - generic [ref=e311]: "]"
+                - generic [ref=e313]: "}"
+                - generic [ref=e315]: "{ name: 'Banana', price: 0.8, quantity: 5 },"
+                - generic [ref=e317]: "];"
+                - generic [ref=e320]: console.log(calculateTotal(cart));
+                - generic [ref=e322]: "}"
+      - generic [ref=e328]:
+        - generic [ref=e329]:
+          - heading "Threads (1)" [level=2] [ref=e330]
+          - combobox [ref=e331]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - generic [ref=e333]:
+          - button "← Back to threads" [ref=e335] [cursor=pointer]
+          - generic [ref=e337]:
+            - generic [ref=e338]:
+              - generic [ref=e340]: Thread 1
+              - generic [ref=e341]: Lines 1-17
+              - generic [ref=e342]:
+                - button "Resolve thread" [ref=e343] [cursor=pointer]: ✓
+                - button "Delete thread" [ref=e344] [cursor=pointer]: 🗑
+            - generic [ref=e346]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { ..."
+            - generic [ref=e347]:
+              - generic [ref=e349]:
+                - generic [ref=e350]: Review this function
+                - generic [ref=e351]: 4:19:56 PM
+              - generic [ref=e354]: 4:19:56 PM
+              - generic [ref=e355]:
+                - textbox "Ask a question about this code..." [ref=e356]
+                - generic [ref=e357]:
+                  - generic [ref=e358]: 0 / 2000
+                  - button "Send" [disabled] [ref=e359]
+                - paragraph [ref=e360]: "Error: request ended without sending any chunks"
+  - generic [ref=e361]:
+    - alert
+    - alert
+```

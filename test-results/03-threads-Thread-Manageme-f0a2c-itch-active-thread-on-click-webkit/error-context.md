@@ -1,0 +1,71 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 13 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active] [ref=e19]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } return total; } const cart = [ { name: 'Ap'} ] } }"
+            - generic [ref=e21]:
+              - generic [ref=e22]:
+                - generic [ref=e23] [cursor=pointer]: 
+                - generic [ref=e24]: "1"
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: 
+                - generic [ref=e27]: "2"
+              - generic [ref=e28]:
+                - generic [ref=e29] [cursor=pointer]: 
+                - generic [ref=e30]: "3"
+              - generic [ref=e32]: "4"
+              - generic [ref=e34]: "5"
+              - generic [ref=e36]: "6"
+              - generic [ref=e38]: "7"
+              - generic [ref=e40]: "8"
+              - generic [ref=e42]: "9"
+              - generic [ref=e45]: "10"
+              - generic [ref=e47]: "11"
+              - generic [ref=e49]: "12"
+              - generic [ref=e51]: "13"
+            - generic [ref=e94]:
+              - generic [ref=e96]: "function calculateTotal(items) {"
+              - generic [ref=e98]: let total = 0;
+              - generic [ref=e100]: "for (let i = 0; i < items.length; i++) {"
+              - generic [ref=e102]: total += items[i].price * items[i].quantity;
+              - generic [ref=e104]: "}"
+              - generic [ref=e106]: return total;
+              - generic [ref=e108]: "}"
+              - generic [ref=e111]: const cart = [
+              - generic [ref=e113]: "{ name: 'Ap'}"
+              - generic [ref=e115]: "]"
+              - generic [ref=e117]: "}"
+              - generic [ref=e119]: "}"
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - heading "Threads (0)" [level=2] [ref=e128]
+          - combobox [ref=e129]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e133]: No threads yet
+  - generic [ref=e134]:
+    - alert
+    - alert
+```

@@ -1,0 +1,127 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 13 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active] [ref=e19]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } return total; } const cart = [ { name: 'Apple', pric} ] } }"
+            - generic [ref=e21]:
+              - generic [ref=e22]:
+                - generic [ref=e23] [cursor=pointer]: 
+                - generic [ref=e24]: "1"
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: 
+                - generic [ref=e27]: "2"
+              - generic [ref=e28]:
+                - generic [ref=e29] [cursor=pointer]: 
+                - generic [ref=e30]: "3"
+              - generic [ref=e32]: "4"
+              - generic [ref=e33]:
+                - generic [ref=e34] [cursor=pointer]: 
+                - generic [ref=e35]: "5"
+              - generic [ref=e37]: "6"
+              - generic [ref=e39]: "7"
+              - generic [ref=e41]: "8"
+              - generic [ref=e42]:
+                - generic [ref=e43] [cursor=pointer]: 
+                - generic [ref=e44]: "9"
+              - generic [ref=e47]: "10"
+              - generic [ref=e48]:
+                - generic [ref=e49] [cursor=pointer]: 
+                - generic [ref=e50]: "11"
+              - generic [ref=e52]: "12"
+              - generic [ref=e54]: "13"
+            - generic [ref=e96]:
+              - generic [ref=e98]: "function calculateTotal(items) {"
+              - generic [ref=e100]: let total = 0;
+              - generic [ref=e102]: "for (let i = 0; i < items.length; i++) {"
+              - generic [ref=e104]: total += items[i].price * items[i].quantity;
+              - generic [ref=e106]: "}"
+              - generic [ref=e108]: return total;
+              - generic [ref=e110]: "}"
+              - generic [ref=e113]: const cart = [
+              - generic [ref=e115]: "{ name: 'Apple', pric}"
+              - generic [ref=e117]: "]"
+              - generic [ref=e119]: "}"
+              - generic [ref=e121]: "}"
+          - listbox "Suggest" [ref=e132]:
+            - generic [ref=e133]:
+              - option "price, File" [ref=e134] [cursor=pointer]:
+                - generic [ref=e136]:
+                  - generic [ref=e137]: 
+                  - generic [ref=e143]: price
+              - option "ProcessingInstruction, Variable" [ref=e145] [cursor=pointer]:
+                - generic [ref=e147]:
+                  - generic [ref=e148]: 
+                  - generic [ref=e154]: ProcessingInstruction
+              - option "PromiseRejectionEvent, Variable" [ref=e155] [cursor=pointer]:
+                - generic [ref=e157]:
+                  - generic [ref=e158]: 
+                  - generic [ref=e164]: PromiseRejectionEvent
+              - option "PeriodicWave, Variable" [ref=e165] [cursor=pointer]:
+                - generic [ref=e167]:
+                  - generic [ref=e168]: 
+                  - generic [ref=e174]: PeriodicWave
+              - option "PictureInPictureEvent, Variable" [ref=e175] [cursor=pointer]:
+                - generic [ref=e177]:
+                  - generic [ref=e178]: 
+                  - generic [ref=e184]: PictureInPictureEvent
+              - option "PictureInPictureWindow, Variable" [ref=e185] [cursor=pointer]:
+                - generic [ref=e187]:
+                  - generic [ref=e188]: 
+                  - generic [ref=e194]: PictureInPictureWindow
+              - option "WebGLShaderPrecisionFormat, Variable" [ref=e195] [cursor=pointer]:
+                - generic [ref=e197]:
+                  - generic [ref=e198]: 
+                  - generic [ref=e204]: WebGLShaderPrecisionFormat
+              - option "AudioProcessingEvent, Variable" [ref=e205] [cursor=pointer]:
+                - generic [ref=e207]:
+                  - generic [ref=e208]: 
+                  - generic [ref=e213]: AudioProcessingEvent
+              - option "PerformanceTiming, Variable" [ref=e214] [cursor=pointer]:
+                - generic [ref=e216]:
+                  - generic [ref=e217]: 
+                  - generic [ref=e222]: PerformanceTiming
+              - option "PerformancePaintTiming, Variable" [ref=e223] [cursor=pointer]:
+                - generic [ref=e225]:
+                  - generic [ref=e226]: 
+                  - generic [ref=e232]: PerformancePaintTiming
+              - option "PerformanceNavigationTiming, Variable" [ref=e233] [cursor=pointer]:
+                - generic [ref=e235]:
+                  - generic [ref=e236]: 
+                  - generic [ref=e242]: PerformanceNavigationTiming
+              - option "PerformanceNavigation, Variable" [ref=e243] [cursor=pointer]:
+                - generic [ref=e245]:
+                  - generic [ref=e246]: 
+                  - generic [ref=e251]: PerformanceNavigation
+      - generic [ref=e255]:
+        - generic [ref=e256]:
+          - heading "Threads (0)" [level=2] [ref=e257]
+          - combobox [ref=e258]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e262]: No threads yet
+  - generic [ref=e263]:
+    - alert
+    - alert
+```

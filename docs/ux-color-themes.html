@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Review Assistant - Color Theme Explorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #0d1117;
+            color: #d4d4d4;
+            padding: 2rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+            margin-bottom: 3rem;
+        }
+
+        .theme-section {
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #3e3e42;
+        }
+
+        .theme-header {
+            margin-bottom: 2rem;
+        }
+
+        .theme-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .theme-description {
+            color: #a0a0a0;
+        }
+
+        /* Color Swatches */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #3e3e42;
+        }
+
+        .color-preview {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .color-info {
+            background: #252526;
+            padding: 0.75rem;
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-hex {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.75rem;
+            color: #a0a0a0;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-usage {
+            font-size: 0.75rem;
+            color: #6a6a6a;
+        }
+
+        /* Thread Colors */
+        .thread-colors {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .thread-swatch {
+            text-align: center;
+        }
+
+        .thread-marker {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 auto 0.5rem;
+        }
+
+        .thread-label {
+            font-size: 0.875rem;
+            color: #a0a0a0;
+        }
+
+        /* Component Examples */
+        .components-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .component-demo {
+            background: #252526;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #3e3e42;
+        }
+
+        .component-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #007acc;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #0098ff;
+        }
+
+        .btn-secondary {
+            background: #3e3e42;
+            color: #d4d4d4;
+        }
+
+        .btn-secondary:hover {
+            background: #4e4e52;
+        }
+
+        .btn-success {
+            background: #4caf50;
+            color: #ffffff;
+        }
+
+        .btn-error {
+            background: #f44336;
+            color: #ffffff;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: #d4d4d4;
+            border: 1px solid #3e3e42;
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Inputs */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .input {
+            background: #1e1e1e;
+            border: 1px solid #3e3e42;
+            border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+            color: #d4d4d4;
+            font-size: 0.875rem;
+        }
+
+        .input:focus {
+            outline: none;
+            border-color: #007acc;
+        }
+
+        .input::placeholder {
+            color: #6a6a6a;
+        }
+
+        /* Cards */
+        .card {
+            background: #2d2d30;
+            border-radius: 8px;
+            padding: 1rem;
+            border: 1px solid #3e3e42;
+        }
+
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            color: #a0a0a0;
+            font-size: 0.875rem;
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid;
+        }
+
+        .alert-success {
+            background: rgba(76, 175, 80, 0.1);
+            border-color: #4caf50;
+            color: #81c784;
+        }
+
+        .alert-warning {
+            background: rgba(255, 152, 0, 0.1);
+            border-color: #ff9800;
+            color: #ffb74d;
+        }
+
+        .alert-error {
+            background: rgba(244, 67, 54, 0.1);
+            border-color: #f44336;
+            color: #ef5350;
+        }
+
+        .alert-info {
+            background: rgba(33, 150, 243, 0.1);
+            border-color: #2196f3;
+            color: #64b5f6;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: #1e1e1e;
+            border: 1px solid #3e3e42;
+            border-radius: 6px;
+            padding: 1rem;
+            font-family: 'Fira Code', 'Monaco', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            line-height: 1.6;
+        }
+
+        .code-line {
+            display: block;
+        }
+
+        .code-keyword { color: #569cd6; }
+        .code-string { color: #ce9178; }
+        .code-function { color: #dcdcaa; }
+        .code-comment { color: #6a9955; }
+
+        /* Thread Demo */
+        .thread-demo {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            gap: 1rem;
+            background: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #3e3e42;
+            height: 400px;
+        }
+
+        .code-panel {
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .thread-panel {
+            background: #252526;
+            padding: 1rem;
+            border-left: 1px solid #3e3e42;
+            overflow-y: auto;
+        }
+
+        .code-with-marker {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .gutter-marker {
+            position: absolute;
+            left: 1rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-top: 4px;
+        }
+
+        .highlighted-code {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .thread-message {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: #1e1e1e;
+            border-radius: 6px;
+        }
+
+        .message-user {
+            color: #d4d4d4;
+            font-weight: 600;
+            font-size: 0.75rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .message-text {
+            color: #d4d4d4;
+            font-size: 0.875rem;
+        }
+
+        /* Typography Scale */
+        .type-scale {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .type-example h1 { font-size: 1.5rem; font-weight: 600; }
+        .type-example h2 { font-size: 1.25rem; font-weight: 600; }
+        .type-example h3 { font-size: 1rem; font-weight: 600; }
+        .type-example .body-lg { font-size: 0.9375rem; }
+        .type-example .body { font-size: 0.875rem; }
+        .type-example .body-sm { font-size: 0.8125rem; }
+        .type-example .caption { font-size: 0.75rem; color: #a0a0a0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Code Review Assistant - Color Theme Explorer</h1>
+        <p class="subtitle">Developer Dark Pro - A refined dark theme optimized for code review</p>
+
+        <!-- Base Colors -->
+        <div class="theme-section">
+            <div class="theme-header">
+                <h2 class="theme-title">Base Color Palette</h2>
+                <p class="theme-description">Foundational colors for backgrounds, surfaces, and borders</p>
+            </div>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #1e1e1e; color: #d4d4d4;">Background</div>
+                    <div class="color-info">
+                        <div class="color-name">Background</div>
+                        <div class="color-hex">#1e1e1e</div>
+                        <div class="color-usage">Main editor background</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #252526; color: #d4d4d4;">Surface</div>
+                    <div class="color-info">
+                        <div class="color-name">Surface</div>
+                        <div class="color-hex">#252526</div>
+                        <div class="color-usage">Thread panel, sidebars</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #2d2d30; color: #d4d4d4;">Elevated</div>
+                    <div class="color-info">
+                        <div class="color-name">Surface Elevated</div>
+                        <div class="color-hex">#2d2d30</div>
+                        <div class="color-usage">Cards, modals, dropdowns</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #3e3e42; color: #d4d4d4;">Border</div>
+                    <div class="color-info">
+                        <div class="color-name">Border</div>
+                        <div class="color-hex">#3e3e42</div>
+                        <div class="color-usage">Dividers, outlines</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brand Colors -->
+        <div class="theme-section">
+            <div class="theme-header">
+                <h2 class="theme-title">Brand & Semantic Colors</h2>
+                <p class="theme-description">Action colors, states, and feedback</p>
+            </div>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #007acc; color: #ffffff;">Primary</div>
+                    <div class="color-info">
+                        <div class="color-name">Primary</div>
+                        <div class="color-hex">#007acc</div>
+                        <div class="color-usage">Main actions, links</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #4caf50; color: #ffffff;">Success</div>
+                    <div class="color-info">
+                        <div class="color-name">Success</div>
+                        <div class="color-hex">#4caf50</div>
+                        <div class="color-usage">Confirmations, positive</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #ff9800; color: #ffffff;">Warning</div>
+                    <div class="color-info">
+                        <div class="color-name">Warning</div>
+                        <div class="color-hex">#ff9800</div>
+                        <div class="color-usage">Cautions, alerts</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #f44336; color: #ffffff;">Error</div>
+                    <div class="color-info">
+                        <div class="color-name">Error</div>
+                        <div class="color-hex">#f44336</div>
+                        <div class="color-usage">Errors, destructive</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thread Colors -->
+        <div class="theme-section">
+            <div class="theme-header">
+                <h2 class="theme-title">Thread Color Palette</h2>
+                <p class="theme-description">8 distinct colors for review threads (applied at 15% opacity for code highlighting)</p>
+            </div>
+            <div class="thread-colors">
+                <div class="thread-swatch">
+                    <div class="thread-marker" style="background: #4fc3f7;"></div>
+                    <div class="thread-label">Thread 1</div>
+                    <div class="color-hex">#4fc3f7</div>
+                </div>
+                <div class="thread-swatch">
+                    <div class="thread-marker" style="background: #81c784;"></div>
+                    <div class="thread-label">Thread 2</div>
+                    <div class="color-hex">#81c784</div>
+                </div>
+                <div class="thread-swatch">
+                    <div class="thread-marker" style="background: #ffb74d;"></div>
+                    <div class="thread-label">Thread 3</div>
+                    <div class="color-hex">#ffb74d</div>
+                </div>
+                <div class="thread-swatch">
+                    <div class="thread-marker" style="background: #ba68c8;"></div>
+                    <div class="thread-label">Thread 4</div>
+                    <div class="color-hex">#ba68c8</div>
+                </div>
+                <div class="thread-swatch">
+                    <div class="thread-marker" style="background: #f06292;"></div>
+                    <div class="thread-label">Thread 5</div>
+                    <div class="color-hex">#f06292</div>
+                </div>
+                <div class="thread-swatch">
+                    <div class="thread-marker" style="background: #64b5f6;"></div>
+                    <div class="thread-label">Thread 6</div>
+                    <div class="color-hex">#64b5f6</div>
+                </div>
+                <div class="thread-swatch">
+                    <div class="thread-marker" style="background: #aed581;"></div>
+                    <div class="thread-label">Thread 7</div>
+                    <div class="color-hex">#aed581</div>
+                </div>
+                <div class="thread-swatch">
+                    <div class="thread-marker" style="background: #ff8a65;"></div>
+                    <div class="thread-label">Thread 8</div>
+                    <div class="color-hex">#ff8a65</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="theme-section">
+            <div class="theme-header">
+                <h2 class="theme-title">Typography Scale</h2>
+                <p class="theme-description">Type hierarchy from headings to captions</p>
+            </div>
+            <div class="type-scale">
+                <div class="type-example">
+                    <h1>Heading 1 - 24px/1.5rem - Semibold (600)</h1>
+                    <div class="caption">Main page titles</div>
+                </div>
+                <div class="type-example">
+                    <h2>Heading 2 - 20px/1.25rem - Semibold (600)</h2>
+                    <div class="caption">Section headers</div>
+                </div>
+                <div class="type-example">
+                    <h3>Heading 3 - 16px/1rem - Semibold (600)</h3>
+                    <div class="caption">Subsections</div>
+                </div>
+                <div class="type-example">
+                    <div class="body-lg">Body Large - 15px/0.9375rem - Regular (400)</div>
+                    <div class="caption">Thread messages, important text</div>
+                </div>
+                <div class="type-example">
+                    <div class="body">Body - 14px/0.875rem - Regular (400)</div>
+                    <div class="caption">Default UI text</div>
+                </div>
+                <div class="type-example">
+                    <div class="body-sm">Body Small - 13px/0.8125rem - Regular (400)</div>
+                    <div class="caption">Metadata, timestamps</div>
+                </div>
+                <div class="type-example">
+                    <div class="caption">Caption - 12px/0.75rem - Regular (400)</div>
+                    <div class="caption">Line numbers, labels</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Component Examples -->
+        <div class="theme-section">
+            <div class="theme-header">
+                <h2 class="theme-title">Component Examples</h2>
+                <p class="theme-description">UI components with theme applied</p>
+            </div>
+            <div class="components-grid">
+                <div class="component-demo">
+                    <div class="component-title">Buttons</div>
+                    <div class="button-group">
+                        <button class="btn btn-primary">Ask AI</button>
+                        <button class="btn btn-secondary">Cancel</button>
+                        <button class="btn btn-success">Resolve Thread</button>
+                        <button class="btn btn-error">Delete</button>
+                        <button class="btn btn-ghost">View Details</button>
+                    </div>
+                </div>
+
+                <div class="component-demo">
+                    <div class="component-title">Form Inputs</div>
+                    <div class="input-group">
+                        <input type="text" class="input" placeholder="Ask a question about this code...">
+                        <input type="text" class="input" value="Filled input example">
+                    </div>
+                </div>
+
+                <div class="component-demo">
+                    <div class="component-title">Alerts</div>
+                    <div class="alert alert-success">✓ Thread resolved successfully</div>
+                    <div class="alert alert-warning">⚠ This code has changed since the thread was created</div>
+                    <div class="alert alert-error">✗ Failed to connect to AI service. Please try again.</div>
+                    <div class="alert alert-info">ℹ You can have up to 10 active threads per file</div>
+                </div>
+
+                <div class="component-demo">
+                    <div class="component-title">Card</div>
+                    <div class="card">
+                        <div class="card-title">Thread #1: Performance Optimization</div>
+                        <div class="card-text">This loop could be optimized using a hash map instead of nested iteration...</div>
+                    </div>
+                </div>
+
+                <div class="component-demo">
+                    <div class="component-title">Code Block</div>
+                    <div class="code-block">
+<span class="code-line"><span class="code-keyword">function</span> <span class="code-function">calculateTotal</span>(items) {</span>
+<span class="code-line">  <span class="code-comment">// Sum up all item prices</span></span>
+<span class="code-line">  <span class="code-keyword">return</span> items.reduce((sum, item) => sum + item.price, <span class="code-string">0</span>);</span>
+<span class="code-line">}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thread Demo -->
+        <div class="theme-section">
+            <div class="theme-header">
+                <h2 class="theme-title">Thread Interaction Demo</h2>
+                <p class="theme-description">Visual demonstration of code review thread</p>
+            </div>
+            <div class="thread-demo">
+                <div class="code-panel">
+                    <div class="code-block">
+<div class="code-with-marker">
+<div class="gutter-marker" style="background: #4fc3f7;"></div>
+<span class="code-line"><span class="code-keyword">function</span> <span class="code-function">processData</span>(data) {</span>
+</div>
+<div class="code-with-marker">
+<div class="gutter-marker" style="background: #4fc3f7;"></div>
+<span class="code-line highlighted-code" style="background: rgba(79, 195, 247, 0.15);">  <span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-string">0</span>; i < data.length; i++) {</span>
+</div>
+<div class="code-with-marker">
+<div class="gutter-marker" style="background: #4fc3f7;"></div>
+<span class="code-line highlighted-code" style="background: rgba(79, 195, 247, 0.15);">    <span class="code-keyword">for</span> (<span class="code-keyword">let</span> j = <span class="code-string">0</span>; j < data.length; j++) {</span>
+</div>
+<div class="code-with-marker">
+<div class="gutter-marker" style="background: #4fc3f7;"></div>
+<span class="code-line highlighted-code" style="background: rgba(79, 195, 247, 0.15);">      <span class="code-keyword">if</span> (data[i].id === data[j].ref) {</span>
+</div>
+<div class="code-with-marker">
+<div class="gutter-marker" style="background: #4fc3f7;"></div>
+<span class="code-line highlighted-code" style="background: rgba(79, 195, 247, 0.15);">        <span class="code-comment">// Process matching items</span></span>
+</div>
+<div class="code-with-marker">
+<div class="gutter-marker" style="background: #4fc3f7;"></div>
+<span class="code-line highlighted-code" style="background: rgba(79, 195, 247, 0.15);">      }</span>
+</div>
+<div class="code-with-marker">
+<div class="gutter-marker" style="background: #4fc3f7;"></div>
+<span class="code-line highlighted-code" style="background: rgba(79, 195, 247, 0.15);">    }</span>
+</div>
+<div class="code-with-marker">
+<div class="gutter-marker" style="background: #4fc3f7;"></div>
+<span class="code-line highlighted-code" style="background: rgba(79, 195, 247, 0.15);">  }</span>
+</div>
+<span class="code-line">}</span>
+                    </div>
+                </div>
+                <div class="thread-panel">
+                    <div class="component-title" style="margin-bottom: 1rem;">Thread #1</div>
+                    <div class="thread-message">
+                        <div class="message-user">You</div>
+                        <div class="message-text">Is there a more efficient way to write this nested loop?</div>
+                    </div>
+                    <div class="thread-message">
+                        <div class="message-user">AI Assistant</div>
+                        <div class="message-text">Yes! This O(n²) nested loop can be optimized to O(n) using a hash map. You're currently checking every item against every other item, but you can build a map of IDs first and then do a single pass for lookups.</div>
+                    </div>
+                    <input type="text" class="input" placeholder="Ask a follow-up question..." style="margin-top: 1rem;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

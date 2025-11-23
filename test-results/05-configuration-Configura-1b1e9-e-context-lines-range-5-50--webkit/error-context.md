@@ -1,0 +1,60 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e8]:
+      - heading "Settings" [level=2] [ref=e9]
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - generic [ref=e12]: Anthropic API Key
+          - generic [ref=e13]:
+            - textbox "sk-ant-..." [ref=e14]: test-api-key-12345
+            - button "Show API key" [ref=e15] [cursor=pointer]: 👁️
+          - paragraph [ref=e16]:
+            - text: Get your API key from
+            - link "console.anthropic.com" [ref=e17]:
+              - /url: https://console.anthropic.com/
+        - generic [ref=e18]:
+          - generic [ref=e19]: "Editor Font Size: 14px"
+          - slider [ref=e20]: "14"
+        - generic [ref=e21]:
+          - generic [ref=e22]: "Context Lines:"
+          - slider [active] [ref=e23]: "5"
+          - paragraph [ref=e24]: More context helps AI but uses more tokens
+      - generic [ref=e25]:
+        - button "Cancel" [ref=e26] [cursor=pointer]
+        - button "Save" [ref=e27] [cursor=pointer]
+    - generic [ref=e28]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - combobox "Programming language" [ref=e32]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - button "Clear" [ref=e33] [cursor=pointer]
+        - code [ref=e37]:
+          - generic [ref=e38]:
+            - textbox "Editor content" [ref=e39]
+            - generic [ref=e44]: "1"
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - heading "Threads (0)" [level=2] [ref=e57]
+          - combobox [ref=e58]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e62]: No threads yet
+  - generic [ref=e63]:
+    - alert
+    - alert
+```

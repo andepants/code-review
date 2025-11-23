@@ -1,0 +1,130 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 33 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active] [ref=e19]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } return total; } const cart = [ { name: 'Apple', price: 1.5, quantity: 3 }, { name: 'Banana', price: 0.8, quantity: 5 }, ]; console.log(calculateTotal(cart)); function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } return total; } const cart = [ { name: 'Apple', price: 1.5, quantity: 3 }, { name: 'Banana', price: 0.8, quantity: 5 }, ]; consol"
+            - generic [ref=e21]:
+              - generic [ref=e24]: "4"
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: 
+                - generic [ref=e27]: "5"
+              - generic [ref=e29]: "6"
+              - generic [ref=e31]: "7"
+              - generic [ref=e33]: "8"
+              - generic [ref=e34]:
+                - generic [ref=e35] [cursor=pointer]: 
+                - generic [ref=e36]: "9"
+              - generic [ref=e37]:
+                - generic [ref=e38] [cursor=pointer]: 
+                - generic [ref=e39]: "10"
+              - generic [ref=e40]:
+                - generic [ref=e41] [cursor=pointer]: 
+                - generic [ref=e42]: "15"
+              - generic [ref=e44]: "11"
+              - generic [ref=e46]: "12"
+              - generic [ref=e48]: "13"
+              - generic [ref=e50]: "14"
+              - generic [ref=e51]:
+                - generic [ref=e52] [cursor=pointer]: 
+                - generic [ref=e53]: "16"
+              - generic [ref=e54]:
+                - generic [ref=e55] [cursor=pointer]: 
+                - generic [ref=e56]: "17"
+              - generic [ref=e58]: "18"
+              - generic [ref=e60]: "30"
+              - generic [ref=e61]:
+                - generic [ref=e62] [cursor=pointer]: 
+                - generic [ref=e63]: "19"
+              - generic [ref=e65]: "20"
+              - generic [ref=e67]: "21"
+              - generic [ref=e69]: "22"
+              - generic [ref=e70]:
+                - generic [ref=e71] [cursor=pointer]: 
+                - generic [ref=e72]: "23"
+              - generic [ref=e73]:
+                - generic [ref=e74] [cursor=pointer]: 
+                - generic [ref=e75]: "24"
+              - generic [ref=e76]:
+                - generic [ref=e77] [cursor=pointer]: 
+                - generic [ref=e78]: "29"
+              - generic [ref=e80]: "25"
+              - generic [ref=e82]: "26"
+              - generic [ref=e84]: "27"
+              - generic [ref=e86]: "28"
+              - generic [ref=e87]:
+                - generic [ref=e88] [cursor=pointer]: 
+                - generic [ref=e89]: "1"
+              - generic [ref=e90]:
+                - generic [ref=e91] [cursor=pointer]: 
+                - generic [ref=e92]: "2"
+              - generic [ref=e93]:
+                - generic [ref=e94] [cursor=pointer]: 
+                - generic [ref=e95]: "3"
+            - generic [ref=e96]:
+              - img [ref=e105]
+              - img [ref=e195]
+              - img [ref=e210]
+              - generic [ref=e226]:
+                - generic [ref=e228]: total += items[i].price * items[i].quantity;
+                - generic [ref=e230]: "}"
+                - generic [ref=e232]: return total;
+                - generic [ref=e234]: "}"
+                - generic [ref=e237]: const cart = [
+                - generic [ref=e239]: "{ name: 'Apple', price: 1.5, quantity: 3 },"
+                - generic [ref=e241]: "function calculateTotal(items) {"
+                - generic [ref=e243]: "{ name: 'Banana', price: 0.8, quantity: 5 },"
+                - generic [ref=e245]: "];"
+                - generic [ref=e248]: console.log(calculateTotal(cart));
+                - generic [ref=e250]: let total = 0;
+                - generic [ref=e252]: "for (let i = 0; i < items.length; i++) {"
+                - generic [ref=e254]: total += items[i].price * items[i].quantity;
+                - generic [ref=e256]: "}"
+                - generic [ref=e258]: "}"
+                - generic [ref=e260]: return total;
+                - generic [ref=e262]: "}"
+                - generic [ref=e265]: const cart = [
+                - generic [ref=e267]: "{ name: 'Apple', price: 1.5, quantity: 3 },"
+                - generic [ref=e269]: "]"
+                - generic [ref=e271]: "{ name: 'Banana', price: 0.8, quantity: 5 },"
+                - generic [ref=e273]: "];"
+                - generic [ref=e276]: console.log(calculateTotal(cart));
+                - generic [ref=e278]: "function calculateTotal(items) {"
+                - generic [ref=e280]: let total = 0;
+                - generic [ref=e282]: "for (let i = 0; i < items.length; i++) {"
+      - generic [ref=e293]:
+        - generic [ref=e294]:
+          - heading "Threads (0)" [level=2] [ref=e295]
+          - combobox [ref=e296]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - generic [ref=e299]:
+          - paragraph [ref=e300]: No threads yet
+          - generic [ref=e301]:
+            - button "Ask AI" [ref=e302] [cursor=pointer]
+            - paragraph [ref=e303]: Lines 2-4 selected
+  - generic [ref=e304]:
+    - alert [ref=e305]: "x: number, A numeric expression., Returns the natural logarithm (base e) of a number., hint"
+    - alert
+```

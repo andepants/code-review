@@ -1,0 +1,106 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 17 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active]
+            - textbox [ref=e19]
+            - generic [ref=e21]:
+              - generic [ref=e22]:
+                - generic [ref=e23] [cursor=pointer]: 
+                - generic [ref=e24]: "1"
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: 
+                - generic [ref=e27]: "2"
+              - generic [ref=e28]:
+                - generic [ref=e29] [cursor=pointer]: 
+                - generic [ref=e30]: "3"
+              - generic [ref=e31]:
+                - generic [ref=e32] [cursor=pointer]: 
+                - generic [ref=e33]: "5"
+              - generic [ref=e35]: "6"
+              - generic [ref=e37]: "7"
+              - generic [ref=e39]: "8"
+              - generic [ref=e40]:
+                - generic [ref=e41] [cursor=pointer]: 
+                - generic [ref=e42]: "9"
+              - generic [ref=e43]:
+                - generic [ref=e44] [cursor=pointer]: 
+                - generic [ref=e45]: "10"
+              - generic [ref=e47]: "11"
+              - generic [ref=e49]: "12"
+              - generic [ref=e51]: "13"
+              - generic [ref=e53]: "14"
+              - generic [ref=e54]:
+                - generic [ref=e55] [cursor=pointer]: 
+                - generic [ref=e56]: "15"
+              - generic [ref=e58]: "16"
+              - generic [ref=e61]: "17"
+            - generic [ref=e62]:
+              - img [ref=e65]
+              - img [ref=e74]
+              - img [ref=e88]
+              - img [ref=e111]
+              - img [ref=e124]
+              - img [ref=e138]
+              - img [ref=e147]
+              - img [ref=e157]
+              - img [ref=e174]
+              - img [ref=e192]
+              - img [ref=e199]
+              - img [ref=e205]
+              - img [ref=e212]
+              - img [ref=e224]
+              - generic [ref=e225]:
+                - generic [ref=e227]: "function calculateTotal(items) {"
+                - generic [ref=e229]: let total = 0;
+                - generic [ref=e231]:
+                  - text: "for (let i = 0; i < items.length; i++) {"
+                  - generic [ref=e232]: ⋯
+                - generic [ref=e234]: "}"
+                - generic [ref=e236]: return total;
+                - generic [ref=e238]: "}"
+                - generic [ref=e241]: const cart = [
+                - generic [ref=e243]: "{ name: 'Apple', price: 1.5, quantity: 3 },"
+                - generic [ref=e245]: "{ name: 'Banana', price: 0.8, quantity: 5 },"
+                - generic [ref=e247]: "];"
+                - generic [ref=e250]: console.log(calculateTotal(cart));
+                - generic [ref=e252]: "]"
+                - generic [ref=e254]: "}"
+                - generic [ref=e256]: "}"
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - heading "Threads (0)" [level=2] [ref=e265]
+          - combobox [ref=e266]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - generic [ref=e269]:
+          - paragraph [ref=e270]: No threads yet
+          - generic [ref=e271]:
+            - button "Ask AI" [ref=e272] [cursor=pointer]
+            - paragraph [ref=e273]: Lines 1-17 selected
+  - generic [ref=e274]:
+    - alert
+    - alert
+```

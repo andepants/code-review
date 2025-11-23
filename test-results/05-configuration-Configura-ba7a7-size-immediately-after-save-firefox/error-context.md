@@ -1,0 +1,112 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 8 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } ret } }"
+            - generic [ref=e20]:
+              - generic [ref=e21]:
+                - generic [ref=e22] [cursor=pointer]: 
+                - generic [ref=e23]: "1"
+              - generic [ref=e24]:
+                - generic [ref=e25] [cursor=pointer]: 
+                - generic [ref=e26]: "2"
+              - generic [ref=e27]:
+                - generic [ref=e28] [cursor=pointer]: 
+                - generic [ref=e29]: "3"
+              - generic [ref=e31]: "4"
+              - generic [ref=e33]: "7"
+              - generic [ref=e35]: "5"
+              - generic [ref=e38]: "6"
+              - generic [ref=e40]: "8"
+            - generic [ref=e74]:
+              - generic [ref=e76]: "function calculateTotal(items) {"
+              - generic [ref=e78]: let total = 0;
+              - generic [ref=e80]: "for (let i = 0; i < items.length; i++) {"
+              - generic [ref=e82]: total += items[i].price * items[i].quantity;
+              - generic [ref=e84]: "}"
+              - generic [ref=e86]: "}"
+              - generic [ref=e88]: ret
+              - generic [ref=e90]: "}"
+          - listbox "Suggest" [ref=e101]:
+            - generic [ref=e102]:
+              - listitem "return, Keyword" [ref=e103] [cursor=pointer]:
+                - generic [ref=e105]:
+                  - generic [ref=e106]: 
+                  - generic [ref=e112]: return
+              - listitem "resizeTo, Function" [ref=e114] [cursor=pointer]:
+                - generic [ref=e116]:
+                  - generic [ref=e117]: 
+                  - generic [ref=e123]: resizeTo
+              - listitem "reportError, Function" [ref=e124] [cursor=pointer]:
+                - generic [ref=e126]:
+                  - generic [ref=e127]: 
+                  - generic [ref=e133]: reportError
+              - listitem "requestAnimationFrame, Function" [ref=e134] [cursor=pointer]:
+                - generic [ref=e136]:
+                  - generic [ref=e137]: 
+                  - generic [ref=e143]: requestAnimationFrame
+              - listitem "requestIdleCallback, Function" [ref=e144] [cursor=pointer]:
+                - generic [ref=e146]:
+                  - generic [ref=e147]: 
+                  - generic [ref=e153]: requestIdleCallback
+              - listitem "RemotePlayback, Variable" [ref=e154] [cursor=pointer]:
+                - generic [ref=e156]:
+                  - generic [ref=e157]: 
+                  - generic [ref=e163]: RemotePlayback
+              - listitem "Report, Variable" [ref=e164] [cursor=pointer]:
+                - generic [ref=e166]:
+                  - generic [ref=e167]: 
+                  - generic [ref=e173]: Report
+              - listitem "ReportBody, Variable" [ref=e174] [cursor=pointer]:
+                - generic [ref=e176]:
+                  - generic [ref=e177]: 
+                  - generic [ref=e183]: ReportBody
+              - listitem "ReportingObserver, Variable" [ref=e184] [cursor=pointer]:
+                - generic [ref=e186]:
+                  - generic [ref=e187]: 
+                  - generic [ref=e193]: ReportingObserver
+              - listitem "Reflect, Module" [ref=e194] [cursor=pointer]:
+                - generic [ref=e196]:
+                  - generic [ref=e197]: 
+                  - generic [ref=e203]: Reflect
+              - listitem "Request, Variable" [ref=e204] [cursor=pointer]:
+                - generic [ref=e206]:
+                  - generic [ref=e207]: 
+                  - generic [ref=e213]: Request
+              - listitem "RTCEncodedAudioFrame, Variable" [ref=e214] [cursor=pointer]:
+                - generic [ref=e216]:
+                  - generic [ref=e217]: 
+                  - generic [ref=e223]: RTCEncodedAudioFrame
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - heading "Threads (0)" [level=2] [ref=e229]
+          - combobox [ref=e230]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e234]: No threads yet
+  - generic [ref=e235]:
+    - alert
+    - alert
+```

@@ -1,0 +1,174 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 59 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active]: "t() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return tr } } } } } } } } } } } } } } }"
+            - generic [ref=e20]:
+              - generic [ref=e22]: "17"
+              - generic [ref=e24]: "18"
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: 
+                - generic [ref=e27]: "19"
+              - generic [ref=e29]: "20"
+              - generic [ref=e31]: "21"
+              - generic [ref=e32]:
+                - generic [ref=e33] [cursor=pointer]: 
+                - generic [ref=e34]: "22"
+              - generic [ref=e36]: "23"
+              - generic [ref=e38]: "24"
+              - generic [ref=e39]:
+                - generic [ref=e40] [cursor=pointer]: 
+                - generic [ref=e41]: "25"
+              - generic [ref=e43]: "26"
+              - generic [ref=e45]: "27"
+              - generic [ref=e46]:
+                - generic [ref=e47] [cursor=pointer]: 
+                - generic [ref=e48]: "28"
+              - generic [ref=e50]: "29"
+              - generic [ref=e52]: "30"
+              - generic [ref=e53]:
+                - generic [ref=e54] [cursor=pointer]: 
+                - generic [ref=e55]: "31"
+              - generic [ref=e57]: "32"
+              - generic [ref=e59]: "33"
+              - generic [ref=e60]:
+                - generic [ref=e61] [cursor=pointer]: 
+                - generic [ref=e62]: "34"
+              - generic [ref=e64]: "35"
+              - generic [ref=e66]: "48"
+              - generic [ref=e68]: "36"
+              - generic [ref=e69]:
+                - generic [ref=e70] [cursor=pointer]: 
+                - generic [ref=e71]: "37"
+              - generic [ref=e73]: "38"
+              - generic [ref=e75]: "47"
+              - generic [ref=e77]: "39"
+              - generic [ref=e78]:
+                - generic [ref=e79] [cursor=pointer]: 
+                - generic [ref=e80]: "40"
+              - generic [ref=e82]: "41"
+              - generic [ref=e84]: "46"
+              - generic [ref=e86]: "42"
+              - generic [ref=e87]:
+                - generic [ref=e88] [cursor=pointer]: 
+                - generic [ref=e89]: "43"
+              - generic [ref=e92]: "44"
+              - generic [ref=e94]: "45"
+              - generic [ref=e96]: "49"
+            - generic [ref=e154]:
+              - generic [ref=e156]: return true;
+              - generic [ref=e158]: "}"
+              - generic [ref=e160]: "function test() {"
+              - generic [ref=e162]: return true;
+              - generic [ref=e164]: "}"
+              - generic [ref=e166]: "function test() {"
+              - generic [ref=e168]: return true;
+              - generic [ref=e170]: "}"
+              - generic [ref=e172]: "function test() {"
+              - generic [ref=e174]: return true;
+              - generic [ref=e176]: "}"
+              - generic [ref=e178]: "function test() {"
+              - generic [ref=e180]: return true;
+              - generic [ref=e182]: "}"
+              - generic [ref=e184]: "function test() {"
+              - generic [ref=e186]: return true;
+              - generic [ref=e188]: "}"
+              - generic [ref=e190]: "function test() {"
+              - generic [ref=e192]: return true;
+              - generic [ref=e194]: "}"
+              - generic [ref=e196]: "}"
+              - generic [ref=e198]: "function test() {"
+              - generic [ref=e200]: return true;
+              - generic [ref=e202]: "}"
+              - generic [ref=e204]: "}"
+              - generic [ref=e206]: "function test() {"
+              - generic [ref=e208]: return true;
+              - generic [ref=e210]: "}"
+              - generic [ref=e212]: "}"
+              - generic [ref=e214]: "function test() {"
+              - generic [ref=e216]: return tr
+              - generic [ref=e218]: "}"
+              - generic [ref=e220]: "}"
+          - listbox "Suggest" [ref=e236]:
+            - generic [ref=e237]:
+              - listitem "true, Keyword" [ref=e238] [cursor=pointer]:
+                - generic [ref=e240]:
+                  - generic [ref=e241]: 
+                  - generic [ref=e247]: "true"
+              - listitem "try, Keyword" [ref=e249] [cursor=pointer]:
+                - generic [ref=e251]:
+                  - generic [ref=e252]: 
+                  - generic [ref=e258]: try
+              - listitem "TrackEvent, Variable" [ref=e259] [cursor=pointer]:
+                - generic [ref=e261]:
+                  - generic [ref=e262]: 
+                  - generic [ref=e268]: TrackEvent
+              - listitem "TransformStream, Variable" [ref=e269] [cursor=pointer]:
+                - generic [ref=e271]:
+                  - generic [ref=e272]: 
+                  - generic [ref=e278]: TransformStream
+              - listitem "TransformStreamDefaultController, Variable" [ref=e279] [cursor=pointer]:
+                - generic [ref=e281]:
+                  - generic [ref=e282]: 
+                  - generic [ref=e288]: TransformStreamDefaultController
+              - listitem "TransitionEvent, Variable" [ref=e289] [cursor=pointer]:
+                - generic [ref=e291]:
+                  - generic [ref=e292]: 
+                  - generic [ref=e298]: TransitionEvent
+              - listitem "TreeWalker, Variable" [ref=e299] [cursor=pointer]:
+                - generic [ref=e301]:
+                  - generic [ref=e302]: 
+                  - generic [ref=e308]: TreeWalker
+              - listitem "TimeRanges, Variable" [ref=e309] [cursor=pointer]:
+                - generic [ref=e311]:
+                  - generic [ref=e312]: 
+                  - generic [ref=e318]: TimeRanges
+              - listitem "throw, Keyword" [ref=e319] [cursor=pointer]:
+                - generic [ref=e321]:
+                  - generic [ref=e322]: 
+                  - generic [ref=e328]: throw
+              - listitem "WebTransport, Variable" [ref=e329] [cursor=pointer]:
+                - generic [ref=e331]:
+                  - generic [ref=e332]: 
+                  - generic [ref=e338]: WebTransport
+              - listitem "WebTransportBidirectionalStream, Variable" [ref=e339] [cursor=pointer]:
+                - generic [ref=e341]:
+                  - generic [ref=e342]: 
+                  - generic [ref=e348]: WebTransportBidirectionalStream
+              - listitem "WebTransportDatagramDuplexStream, Variable" [ref=e349] [cursor=pointer]:
+                - generic [ref=e351]:
+                  - generic [ref=e352]: 
+                  - generic [ref=e358]: WebTransportDatagramDuplexStream
+      - generic [ref=e360]:
+        - generic [ref=e361]:
+          - heading "Threads (0)" [level=2] [ref=e362]
+          - combobox [ref=e363]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e367]: No threads yet
+  - generic [ref=e368]:
+    - alert
+    - alert
+```

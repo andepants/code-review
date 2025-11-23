@@ -1,0 +1,79 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 14 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } return total; } const cart = [ { name: 'Apple', price: 1.5, quantity: 3 }, { } ] } }"
+            - generic [ref=e20]:
+              - generic [ref=e21]:
+                - generic [ref=e22] [cursor=pointer]: 
+                - generic [ref=e23]: "1"
+              - generic [ref=e24]:
+                - generic [ref=e25] [cursor=pointer]: 
+                - generic [ref=e26]: "2"
+              - generic [ref=e27]:
+                - generic [ref=e28] [cursor=pointer]: 
+                - generic [ref=e29]: "3"
+              - generic [ref=e31]: "4"
+              - generic [ref=e32]:
+                - generic [ref=e33] [cursor=pointer]: 
+                - generic [ref=e34]: "5"
+              - generic [ref=e36]: "6"
+              - generic [ref=e38]: "7"
+              - generic [ref=e40]: "8"
+              - generic [ref=e41]:
+                - generic [ref=e42] [cursor=pointer]: 
+                - generic [ref=e43]: "9"
+              - generic [ref=e45]: "10"
+              - generic [ref=e46]:
+                - generic [ref=e47] [cursor=pointer]: 
+                - generic [ref=e48]: "12"
+              - generic [ref=e50]: "13"
+              - generic [ref=e53]: "11"
+              - generic [ref=e55]: "14"
+            - generic [ref=e100]:
+              - generic [ref=e102]: "function calculateTotal(items) {"
+              - generic [ref=e104]: let total = 0;
+              - generic [ref=e106]: "for (let i = 0; i < items.length; i++) {"
+              - generic [ref=e108]: total += items[i].price * items[i].quantity;
+              - generic [ref=e110]: "}"
+              - generic [ref=e112]: return total;
+              - generic [ref=e114]: "}"
+              - generic [ref=e117]: const cart = [
+              - generic [ref=e119]: "{ name: 'Apple', price: 1.5, quantity: 3 },"
+              - generic [ref=e121]: "]"
+              - generic [ref=e123]: "}"
+              - generic [ref=e125]: "{ }"
+              - generic [ref=e127]: "}"
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - heading "Threads (0)" [level=2] [ref=e136]
+          - combobox [ref=e137]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e141]: No threads yet
+  - generic [ref=e142]:
+    - alert
+    - alert
+```

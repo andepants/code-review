@@ -1,0 +1,48 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 4 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active] [ref=e19]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length;) }"
+            - generic [ref=e21]:
+              - generic [ref=e23]: "1"
+              - generic [ref=e25]: "2"
+              - generic [ref=e28]: "3"
+              - generic [ref=e30]: "4"
+            - generic [ref=e44]:
+              - generic [ref=e46]: "function calculateTotal(items) {"
+              - generic [ref=e48]: let total = 0;
+              - generic [ref=e50]: for (let i = 0; i < items.length;)
+              - generic [ref=e52]: "}"
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - heading "Threads (0)" [level=2] [ref=e61]
+          - combobox [ref=e62]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e66]: No threads yet
+  - generic [ref=e67]:
+    - alert
+    - alert
+```

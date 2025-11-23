@@ -1,0 +1,128 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 13 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active] [ref=e19]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } return total; } const cart = [ { name: 'Apple', p} ] } }"
+            - generic [ref=e21]:
+              - generic [ref=e22]:
+                - generic [ref=e23] [cursor=pointer]: 
+                - generic [ref=e24]: "1"
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: 
+                - generic [ref=e27]: "2"
+              - generic [ref=e28]:
+                - generic [ref=e29] [cursor=pointer]: 
+                - generic [ref=e30]: "3"
+              - generic [ref=e32]: "4"
+              - generic [ref=e33]:
+                - generic [ref=e34] [cursor=pointer]: 
+                - generic [ref=e35]: "5"
+              - generic [ref=e37]: "6"
+              - generic [ref=e39]: "7"
+              - generic [ref=e41]: "8"
+              - generic [ref=e42]:
+                - generic [ref=e43] [cursor=pointer]: 
+                - generic [ref=e44]: "9"
+              - generic [ref=e47]: "10"
+              - generic [ref=e48]:
+                - generic [ref=e49] [cursor=pointer]: 
+                - generic [ref=e50]: "11"
+              - generic [ref=e52]: "12"
+              - generic [ref=e54]: "13"
+            - generic [ref=e97]:
+              - generic [ref=e99]: "function calculateTotal(items) {"
+              - generic [ref=e101]: let total = 0;
+              - generic [ref=e103]: "for (let i = 0; i < items.length; i++) {"
+              - generic [ref=e105]: total += items[i].price * items[i].quantity;
+              - generic [ref=e107]: "}"
+              - generic [ref=e109]: return total;
+              - generic [ref=e111]: "}"
+              - generic [ref=e114]: const cart = [
+              - generic [ref=e116]: "{ name: 'Apple', p}"
+              - generic [ref=e118]: "]"
+              - generic [ref=e120]: "}"
+              - generic [ref=e122]: "}"
+          - listbox "Suggest" [ref=e133]:
+            - generic [ref=e134]:
+              - option "package, Keyword" [ref=e135] [cursor=pointer]:
+                - generic [ref=e137]:
+                  - generic [ref=e138]: 
+                  - generic [ref=e144]: package
+                  - generic [ref=e146]: package
+              - option "pageXOffset, Variable" [ref=e147] [cursor=pointer]:
+                - generic [ref=e149]:
+                  - generic [ref=e150]: 
+                  - generic [ref=e156]: pageXOffset
+              - option "pageYOffset, Variable" [ref=e157] [cursor=pointer]:
+                - generic [ref=e159]:
+                  - generic [ref=e160]: 
+                  - generic [ref=e166]: pageYOffset
+              - option "parent, Variable" [ref=e167] [cursor=pointer]:
+                - generic [ref=e169]:
+                  - generic [ref=e170]: 
+                  - generic [ref=e176]: parent
+              - option "parseFloat, Function" [ref=e177] [cursor=pointer]:
+                - generic [ref=e179]:
+                  - generic [ref=e180]: 
+                  - generic [ref=e186]: parseFloat
+              - option "parseInt, Function" [ref=e187] [cursor=pointer]:
+                - generic [ref=e189]:
+                  - generic [ref=e190]: 
+                  - generic [ref=e196]: parseInt
+              - option "performance, Variable" [ref=e197] [cursor=pointer]:
+                - generic [ref=e199]:
+                  - generic [ref=e200]: 
+                  - generic [ref=e206]: performance
+              - option "personalbar, Variable" [ref=e207] [cursor=pointer]:
+                - generic [ref=e209]:
+                  - generic [ref=e210]: 
+                  - generic [ref=e216]: personalbar
+              - option "postMessage, Function" [ref=e217] [cursor=pointer]:
+                - generic [ref=e219]:
+                  - generic [ref=e220]: 
+                  - generic [ref=e226]: postMessage
+              - option "print, Function" [ref=e227] [cursor=pointer]:
+                - generic [ref=e229]:
+                  - generic [ref=e230]: 
+                  - generic [ref=e236]: print
+              - option "prompt, Function" [ref=e237] [cursor=pointer]:
+                - generic [ref=e239]:
+                  - generic [ref=e240]: 
+                  - generic [ref=e246]: prompt
+              - option "price, File" [ref=e247] [cursor=pointer]:
+                - generic [ref=e249]:
+                  - generic [ref=e250]: 
+                  - generic [ref=e256]: price
+      - generic [ref=e260]:
+        - generic [ref=e261]:
+          - heading "Threads (0)" [level=2] [ref=e262]
+          - combobox [ref=e263]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e267]: No threads yet
+  - generic [ref=e268]:
+    - alert
+    - alert
+```

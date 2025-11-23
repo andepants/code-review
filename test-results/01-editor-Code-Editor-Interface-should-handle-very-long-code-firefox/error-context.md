@@ -1,0 +1,78 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript"
+            - option "TypeScript"
+            - option "Python"
+            - option "Java" [selected]
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 19 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active]: "cessed: 0, errors: 0 }; } async process(data) { try { const validated = await this.validate(data); const transformed = this.transform(validated); const enriched = await this.enrich(transformed); const result = this.finalize(enriched); this.stats.processed++; } } } }"
+            - generic [ref=e20]:
+              - generic [ref=e21]:
+                - generic [ref=e22] [cursor=pointer]: 
+                - generic [ref=e23]: "1"
+              - generic [ref=e25]: "2"
+              - generic [ref=e27]: "3"
+              - generic [ref=e29]: "4"
+              - generic [ref=e31]: "5"
+              - generic [ref=e33]: "6"
+              - generic [ref=e35]: "7"
+              - generic [ref=e37]: "8"
+              - generic [ref=e39]: "9"
+              - generic [ref=e41]: "17"
+              - generic [ref=e43]: "10"
+              - generic [ref=e45]: "16"
+              - generic [ref=e47]: "18"
+              - generic [ref=e49]: "11"
+              - generic [ref=e51]: "12"
+              - generic [ref=e53]: "13"
+              - generic [ref=e55]: "14"
+              - generic [ref=e58]: "15"
+              - generic [ref=e60]: "19"
+            - generic [ref=e219]:
+              - generic [ref=e221]: "class DataProcessor {"
+              - generic [ref=e223]: "constructor(config) {"
+              - generic [ref=e225]: this.config = config;
+              - generic [ref=e227]: this.cache = new Map();
+              - generic [ref=e229]: "this.stats = { processed: 0, errors: 0 };"
+              - generic [ref=e231]: "}"
+              - generic [ref=e234]: "async process(data) {"
+              - generic [ref=e236]: "try {"
+              - generic [ref=e238]: "}"
+              - generic [ref=e240]: const validated = await this.validate(data);
+              - generic [ref=e242]: "}"
+              - generic [ref=e244]: "}"
+              - generic [ref=e246]: const transformed = this.transform(validated);
+              - generic [ref=e248]: const enriched = await this.enrich(transformed);
+              - generic [ref=e250]: const result = this.finalize(enriched);
+              - generic [ref=e252]: this.stats.processed++;
+              - generic [ref=e256]: "}"
+      - generic [ref=e265]:
+        - generic [ref=e266]:
+          - heading "Threads (0)" [level=2] [ref=e267]
+          - combobox [ref=e268]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e272]: No threads yet
+  - generic [ref=e273]:
+    - alert
+    - alert
+```

@@ -1,0 +1,90 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 13 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active] [ref=e19]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } return total; } const cart = [ { name} ] } }"
+            - generic [ref=e21]:
+              - generic [ref=e22]:
+                - generic [ref=e23] [cursor=pointer]: 
+                - generic [ref=e24]: "1"
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: 
+                - generic [ref=e27]: "2"
+              - generic [ref=e28]:
+                - generic [ref=e29] [cursor=pointer]: 
+                - generic [ref=e30]: "3"
+              - generic [ref=e32]: "4"
+              - generic [ref=e33]:
+                - generic [ref=e34] [cursor=pointer]: 
+                - generic [ref=e35]: "5"
+              - generic [ref=e37]: "6"
+              - generic [ref=e39]: "7"
+              - generic [ref=e41]: "8"
+              - generic [ref=e43]: "9"
+              - generic [ref=e46]: "10"
+              - generic [ref=e47]:
+                - generic [ref=e48] [cursor=pointer]: 
+                - generic [ref=e49]: "11"
+              - generic [ref=e51]: "12"
+              - generic [ref=e53]: "13"
+            - generic [ref=e95]:
+              - generic [ref=e97]: "function calculateTotal(items) {"
+              - generic [ref=e99]: let total = 0;
+              - generic [ref=e101]: "for (let i = 0; i < items.length; i++) {"
+              - generic [ref=e103]: total += items[i].price * items[i].quantity;
+              - generic [ref=e105]: "}"
+              - generic [ref=e107]: return total;
+              - generic [ref=e109]: "}"
+              - generic [ref=e112]: const cart = [
+              - generic [ref=e114]: "{ name}"
+              - generic [ref=e116]: "]"
+              - generic [ref=e118]: "}"
+              - generic [ref=e120]: "}"
+          - listbox "Suggest" [ref=e131]:
+            - generic [ref=e132]:
+              - option "name, Property" [ref=e133] [cursor=pointer]:
+                - generic [ref=e135]:
+                  - generic [ref=e136]: 
+                  - generic [ref=e141]: name
+                  - generic [ref=e143]: "const name: void"
+              - option "NamedNodeMap, Variable" [ref=e144] [cursor=pointer]:
+                - generic [ref=e146]:
+                  - generic [ref=e147]: 
+                  - generic [ref=e153]: NamedNodeMap
+              - option "NavigationPreloadManager, Variable" [ref=e154] [cursor=pointer]:
+                - generic [ref=e156]:
+                  - generic [ref=e157]: 
+                  - generic [ref=e163]: NavigationPreloadManager
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - heading "Threads (0)" [level=2] [ref=e167]
+          - combobox [ref=e168]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e172]: No threads yet
+  - generic [ref=e173]:
+    - alert
+    - alert
+```

@@ -1,0 +1,97 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript"
+            - option "TypeScript" [selected]
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 36 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active] [ref=e19]: "alize(enriched); this.stats.processed++; return result; } catch (error) { this.stats.errors++; throw error; } } validate(data) { if (!data || typeof data !== 'object') { throw new Error('Invalid data format'); } return data; } transfo } } } } } } }"
+            - generic [ref=e21]:
+              - generic [ref=e23]: "5"
+              - generic [ref=e25]: "6"
+              - generic [ref=e27]: "7"
+              - generic [ref=e29]: "8"
+              - generic [ref=e31]: "9"
+              - generic [ref=e33]: "10"
+              - generic [ref=e35]: "33"
+              - generic [ref=e37]: "11"
+              - generic [ref=e39]: "12"
+              - generic [ref=e41]: "13"
+              - generic [ref=e43]: "14"
+              - generic [ref=e45]: "15"
+              - generic [ref=e47]: "16"
+              - generic [ref=e49]: "17"
+              - generic [ref=e51]: "32"
+              - generic [ref=e53]: "18"
+              - generic [ref=e55]: "19"
+              - generic [ref=e57]: "20"
+              - generic [ref=e59]: "21"
+              - generic [ref=e61]: "22"
+              - generic [ref=e63]: "23"
+              - generic [ref=e65]: "31"
+              - generic [ref=e67]: "24"
+              - generic [ref=e69]: "30"
+              - generic [ref=e71]: "25"
+              - generic [ref=e73]: "26"
+              - generic [ref=e75]: "27"
+              - generic [ref=e77]: "28"
+              - generic [ref=e80]: "29"
+              - generic [ref=e82]: "34"
+            - generic [ref=e379]:
+              - generic [ref=e381]: "this.stats = { processed: 0, errors: 0 };"
+              - generic [ref=e383]: "}"
+              - generic [ref=e386]: "async process(data) {"
+              - generic [ref=e388]: "try {"
+              - generic [ref=e390]: const validated = await this.validate(data);
+              - generic [ref=e392]: "}"
+              - generic [ref=e394]: const transformed = this.transform(validated);
+              - generic [ref=e396]: const enriched = await this.enrich(transformed);
+              - generic [ref=e398]: const result = this.finalize(enriched);
+              - generic [ref=e400]: this.stats.processed++;
+              - generic [ref=e402]: return result;
+              - generic [ref=e404]: "} catch (error) {"
+              - generic [ref=e406]: this.stats.errors++;
+              - generic [ref=e408]: "}"
+              - generic [ref=e410]: throw error;
+              - generic [ref=e412]: "}"
+              - generic [ref=e414]: "}"
+              - generic [ref=e417]: "validate(data) {"
+              - generic [ref=e419]: "if (!data || typeof data !== 'object') {"
+              - generic [ref=e421]: "}"
+              - generic [ref=e423]: throw new Error('Invalid data format');
+              - generic [ref=e425]: "}"
+              - generic [ref=e427]: "}"
+              - generic [ref=e429]: return data;
+              - generic [ref=e431]: "}"
+              - generic [ref=e434]: transfo
+              - generic [ref=e436]: "}"
+      - generic [ref=e450]:
+        - generic [ref=e451]:
+          - heading "Threads (0)" [level=2] [ref=e452]
+          - combobox [ref=e453]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e457]: No threads yet
+  - generic [ref=e458]:
+    - alert
+    - alert
+```

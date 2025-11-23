@@ -1,0 +1,138 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript"
+            - option "TypeScript" [selected]
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 68 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active]
+            - textbox [ref=e19]
+            - generic [ref=e21]:
+              - generic [ref=e23]: "28"
+              - generic [ref=e24]:
+                - generic [ref=e25] [cursor=pointer]: 
+                - generic [ref=e26]: "29"
+              - generic [ref=e27]:
+                - generic [ref=e28] [cursor=pointer]: 
+                - generic [ref=e29]: "30"
+              - generic [ref=e30]:
+                - generic [ref=e31] [cursor=pointer]: 
+                - generic [ref=e32]: "31"
+              - generic [ref=e34]: "32"
+              - generic [ref=e36]: "33"
+              - generic [ref=e37]:
+                - generic [ref=e38] [cursor=pointer]: 
+                - generic [ref=e39]: "34"
+              - generic [ref=e41]: "35"
+              - generic [ref=e42]:
+                - generic [ref=e43] [cursor=pointer]: 
+                - generic [ref=e44]: "36"
+              - generic [ref=e45]:
+                - generic [ref=e46] [cursor=pointer]: 
+                - generic [ref=e47]: "37"
+              - generic [ref=e48]:
+                - generic [ref=e49] [cursor=pointer]: 
+                - generic [ref=e50]: "38"
+              - generic [ref=e52]: "39"
+              - generic [ref=e53]:
+                - generic [ref=e54] [cursor=pointer]: 
+                - generic [ref=e55]: "40"
+              - generic [ref=e56]:
+                - generic [ref=e57] [cursor=pointer]: 
+                - generic [ref=e58]: "41"
+              - generic [ref=e60]: "42"
+              - generic [ref=e61]:
+                - generic [ref=e62] [cursor=pointer]: 
+                - generic [ref=e63]: "43"
+              - generic [ref=e65]: "44"
+              - generic [ref=e66]:
+                - generic [ref=e67] [cursor=pointer]: 
+                - generic [ref=e68]: "45"
+              - generic [ref=e69]:
+                - generic [ref=e70] [cursor=pointer]: 
+                - generic [ref=e71]: "46"
+              - generic [ref=e73]: "59"
+              - generic [ref=e75]: "47"
+              - generic [ref=e77]: "58"
+              - generic [ref=e79]: "48"
+              - generic [ref=e81]: "49"
+              - generic [ref=e83]: "50"
+              - generic [ref=e85]: "51"
+              - generic [ref=e87]: "52"
+              - generic [ref=e89]: "57"
+              - generic [ref=e91]: "53"
+              - generic [ref=e93]: "56"
+              - generic [ref=e95]: "54"
+              - generic [ref=e98]: "55"
+              - generic [ref=e99]:
+                - generic [ref=e100] [cursor=pointer]: 
+                - generic [ref=e101]: "60"
+            - generic [ref=e428]:
+              - generic [ref=e431]: "transform(data) {"
+              - generic [ref=e433]: "return Object.keys(data).reduce((acc, key) => {"
+              - generic [ref=e435]: acc[key.toLowerCase()] = data[key];
+              - generic [ref=e437]: return acc;
+              - generic [ref=e439]: "}, {});"
+              - generic [ref=e441]: "}"
+              - generic [ref=e444]: "async enrich(data) {"
+              - generic [ref=e446]: const cached = this.cache.get(data.id);
+              - generic [ref=e448]: "if (cached) return { ...data, ...cached };"
+              - generic [ref=e451]: const additional = await this.fetchAdditionalData(data.id);
+              - generic [ref=e453]: this.cache.set(data.id, additional);
+              - generic [ref=e455]: "return { ...data, ...additional };"
+              - generic [ref=e457]: "}"
+              - generic [ref=e460]: "async fetchAdditionalData(id) {"
+              - generic [ref=e462]: "return new Promise(resolve => {"
+              - generic [ref=e464]: "}"
+              - generic [ref=e466]: "setTimeout(() => resolve({ enriched: true }), 100);"
+              - generic [ref=e468]: "})"
+              - generic [ref=e470]: "});"
+              - generic [ref=e472]: "}"
+              - generic [ref=e475]: "finalize(data) {"
+              - generic [ref=e477]: "return {"
+              - generic [ref=e479]: "}"
+              - generic [ref=e481]: ...data,
+              - generic [ref=e483]: "}"
+              - generic [ref=e485]: "processedAt: new Date(),"
+              - generic [ref=e489]: "}"
+            - generic [ref=e497]:
+              - generic [ref=e498]:
+                - generic [ref=e499]: "1"
+                - generic [ref=e500]: 
+              - generic [ref=e501]:
+                - list:
+                  - listitem [ref=e502]:
+                    - generic [ref=e503]: "class DataProcessor {"
+          - generic [ref=e510]:
+            - text:  
+            - generic [ref=e513]: "resolve(value: unknown): void"
+      - generic [ref=e515]:
+        - generic [ref=e516]:
+          - heading "Threads (0)" [level=2] [ref=e517]
+          - combobox [ref=e518]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e522]: No threads yet
+  - generic [ref=e523]:
+    - alert [ref=e524]: "value: unknown, , , hint"
+    - alert
+```

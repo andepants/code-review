@@ -1,0 +1,70 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 11 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active] [ref=e19]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price * items[i].quantity; } return total; } const ca } }"
+            - generic [ref=e21]:
+              - generic [ref=e22]:
+                - generic [ref=e23] [cursor=pointer]: 
+                - generic [ref=e24]: "1"
+              - generic [ref=e25]:
+                - generic [ref=e26] [cursor=pointer]: 
+                - generic [ref=e27]: "2"
+              - generic [ref=e29]: "3"
+              - generic [ref=e31]: "4"
+              - generic [ref=e33]: "10"
+              - generic [ref=e35]: "5"
+              - generic [ref=e37]: "6"
+              - generic [ref=e39]: "7"
+              - generic [ref=e41]: "8"
+              - generic [ref=e44]: "9"
+              - generic [ref=e46]: "11"
+            - generic [ref=e84]:
+              - generic [ref=e86]: "function calculateTotal(items) {"
+              - generic [ref=e88]: let total = 0;
+              - generic [ref=e90]: "for (let i = 0; i < items.length; i++) {"
+              - generic [ref=e92]: total += items[i].price * items[i].quantity;
+              - generic [ref=e94]: "}"
+              - generic [ref=e96]: "}"
+              - generic [ref=e98]: return total;
+              - generic [ref=e100]: "}"
+              - generic [ref=e103]: const ca
+              - generic [ref=e105]: "}"
+          - listbox "Suggest" [ref=e116]:
+            - option "calculateTotal, Text" [ref=e118] [cursor=pointer]:
+              - generic [ref=e120]:
+                - generic [ref=e121]: 
+                - generic [ref=e127]: calculateTotal
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - heading "Threads (0)" [level=2] [ref=e132]
+          - combobox [ref=e133]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e137]: No threads yet
+  - generic [ref=e138]:
+    - alert
+    - alert
+```

@@ -1,0 +1,100 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "AI Code Review Assistant" [level=1] [ref=e5]
+      - button "Settings" [ref=e6] [cursor=pointer]: ⚙️
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - combobox "Programming language" [ref=e11]:
+            - option "JavaScript" [selected]
+            - option "TypeScript"
+            - option "Python"
+            - option "Java"
+            - option "Go"
+            - option "C++"
+            - option "Rust"
+            - option "Ruby"
+            - option "PHP"
+          - generic [ref=e12]: 84 lines
+          - button "Clear" [ref=e13] [cursor=pointer]
+        - code [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Editor content" [active] [ref=e19]: "return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } function test() { return true; } } } } } } } } } } } } } } } } } } } } } }"
+            - generic [ref=e21]:
+              - generic [ref=e23]: "39"
+              - generic [ref=e25]: "40"
+              - generic [ref=e27]: "41"
+              - generic [ref=e29]: "42"
+              - generic [ref=e31]: "43"
+              - generic [ref=e33]: "44"
+              - generic [ref=e35]: "45"
+              - generic [ref=e37]: "46"
+              - generic [ref=e39]: "47"
+              - generic [ref=e41]: "48"
+              - generic [ref=e43]: "49"
+              - generic [ref=e45]: "50"
+              - generic [ref=e47]: "51"
+              - generic [ref=e49]: "52"
+              - generic [ref=e51]: "53"
+              - generic [ref=e53]: "67"
+              - generic [ref=e55]: "54"
+              - generic [ref=e57]: "55"
+              - generic [ref=e59]: "56"
+              - generic [ref=e61]: "66"
+              - generic [ref=e63]: "57"
+              - generic [ref=e65]: "58"
+              - generic [ref=e67]: "59"
+              - generic [ref=e69]: "65"
+              - generic [ref=e71]: "60"
+              - generic [ref=e73]: "61"
+              - generic [ref=e75]: "62"
+              - generic [ref=e77]: "64"
+              - generic [ref=e80]: "63"
+              - generic [ref=e82]: "68"
+            - generic [ref=e133]:
+              - generic [ref=e135]: "}"
+              - generic [ref=e137]: "function test() {"
+              - generic [ref=e139]: return true;
+              - generic [ref=e141]: "}"
+              - generic [ref=e143]: "function test() {"
+              - generic [ref=e145]: return true;
+              - generic [ref=e147]: "}"
+              - generic [ref=e149]: "function test() {"
+              - generic [ref=e151]: return true;
+              - generic [ref=e153]: "}"
+              - generic [ref=e155]: "function test() {"
+              - generic [ref=e157]: return true;
+              - generic [ref=e159]: "}"
+              - generic [ref=e161]: "function test() {"
+              - generic [ref=e163]: return true;
+              - generic [ref=e165]: "}"
+              - generic [ref=e167]: "}"
+              - generic [ref=e169]: "function test() {"
+              - generic [ref=e171]: return true;
+              - generic [ref=e173]: "}"
+              - generic [ref=e175]: "}"
+              - generic [ref=e177]: "function test() {"
+              - generic [ref=e179]: return true;
+              - generic [ref=e181]: "}"
+              - generic [ref=e183]: "}"
+              - generic [ref=e185]: "function test() {"
+              - generic [ref=e187]: return true;
+              - generic [ref=e189]: "}"
+              - generic [ref=e191]: "}"
+              - generic [ref=e193]: "}"
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - heading "Threads (0)" [level=2] [ref=e207]
+          - combobox [ref=e208]:
+            - option "All" [selected]
+            - option "Active"
+            - option "Resolved"
+        - paragraph [ref=e212]: No threads yet
+  - generic [ref=e213]:
+    - alert
+    - alert
+```
