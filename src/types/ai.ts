@@ -28,3 +28,12 @@ export interface CodeReviewResponse {
   model: string;
   tokens?: number;
 }
+
+/**
+ * UltraThink chat request
+ */
+export interface UltraThinkRequest {
+  message: string;
+  conversationHistory?: ConversationMessage[];
+  systemPrompt?: string;
+}

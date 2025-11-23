@@ -3,12 +3,17 @@ import { useThreadStore } from '../../store/threadStore';
 import { useEditorStore } from '../../store/editorStore';
 import { ThreadItem } from './ThreadItem';
 import { NewThreadButton } from './NewThreadButton';
+import { FloatingNewThreadButton } from './FloatingNewThreadButton';
 import { Button } from '../ui/Button';
 
 export function ThreadPanel() {
-  const threads = useThreadStore((state) => state.threads);
   const activeThreadId = useThreadStore((state) => state.activeThreadId);
   const setActiveThread = useThreadStore((state) => state.setActiveThread);
+  // Get active thread directly from store for proper reactivity
+  const activeThread = useThreadStore((state) =>
+    state.threads.find((t) => t.id === state.activeThreadId)
+  );
+  const threads = useThreadStore((state) => state.threads);
   const currentSelection = useEditorStore((state) => state.currentSelection);
   const [filter, setFilter] = useState<'all' | 'active' | 'resolved'>('all');
 
@@ -17,10 +22,8 @@ export function ThreadPanel() {
     return thread.status === filter;
   });
 
-  const activeThread = threads.find((t) => t.id === activeThreadId);
-
   return (
-    <div data-testid="thread-panel" className="h-full bg-surface flex flex-col border-l border-gray-700">
+    <div data-testid="thread-panel" className="h-full bg-surface flex flex-col border-l border-gray-700 relative">
       {/* Header */}
       <div className="h-12 border-b border-gray-700 flex items-center px-4 gap-3">
         <h2 className="text-sm font-semibold text-text-primary">
@@ -84,6 +87,9 @@ export function ThreadPanel() {
           </div>
         )}
       </div>
+
+      {/* Floating Action Button - Always visible when code is selected */}
+      <FloatingNewThreadButton />
     </div>
   );
 }

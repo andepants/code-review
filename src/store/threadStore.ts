@@ -7,7 +7,7 @@ interface ThreadStore {
   threads: Thread[];
   activeThreadId: string | null;
   createThread: (selection: CodeSelection, documentId: string) => Thread;
-  addMessage: (threadId: string, message: Omit<Message, 'id' | 'timestamp'>) => void;
+  addMessage: (threadId: string, message: Omit<Message, 'timestamp'> & { id?: string }) => void;
   updateMessage: (messageId: string, updates: Partial<Message>) => void;
   setActiveThread: (threadId: string | null) => void;
   resolveThread: (threadId: string) => void;
@@ -46,7 +46,7 @@ export const useThreadStore = create<ThreadStore>()(
       addMessage: (threadId, messageData) => {
         const message: Message = {
           ...messageData,
-          id: crypto.randomUUID(),
+          id: messageData.id || crypto.randomUUID(),
           timestamp: new Date(),
         };
         set((state) => ({
@@ -62,14 +62,32 @@ export const useThreadStore = create<ThreadStore>()(
         }));
       },
       updateMessage: (messageId, updates) => {
-        set((state) => ({
-          threads: state.threads.map((thread) => ({
-            ...thread,
-            messages: thread.messages.map((msg) =>
-              msg.id === messageId ? { ...msg, ...updates } : msg
-            ),
-          })),
-        }));
+        set((state) => {
+          const newThreads = state.threads.map((thread) => {
+            // Check if this thread contains the message
+            const hasMessage = thread.messages.some((msg) => msg.id === messageId);
+
+            // Only update threads that contain the message
+            if (!hasMessage) return thread;
+
+            const updatedThread = {
+              ...thread,
+              messages: thread.messages.map((msg) =>
+                msg.id === messageId ? { ...msg, ...updates } : msg
+              ),
+              updatedAt: new Date(), // Force re-render by updating timestamp
+            };
+
+            // Log streaming updates for debugging
+            if (updates.content !== undefined) {
+              console.log('[ThreadStore] Message updated, content length:', updates.content.length);
+            }
+
+            return updatedThread;
+          });
+
+          return { threads: newThreads };
+        });
       },
       setActiveThread: (threadId) => set({ activeThreadId: threadId }),
       resolveThread: (threadId) => {
@@ -108,6 +126,11 @@ export const useThreadStore = create<ThreadStore>()(
     }),
     {
       name: 'thread-storage',
+      // Ensure streaming updates aren't throttled by persist middleware
+      partialize: (state) => ({
+        threads: state.threads,
+        activeThreadId: state.activeThreadId,
+      }),
     }
   )
 );
