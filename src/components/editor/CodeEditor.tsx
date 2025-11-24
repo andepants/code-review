@@ -8,6 +8,7 @@ import { MONACO_OPTIONS } from '../../config/monaco';
 import { THREAD_COLORS } from '../../config/constants';
 import { detectLanguage } from '../../utils/languageDetection';
 import { EditorToolbar } from './EditorToolbar';
+import { FloatingNewThreadButton } from '../threads/FloatingNewThreadButton';
 
 export function CodeEditor() {
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
@@ -148,7 +149,7 @@ export function CodeEditor() {
   return (
     <div className="flex flex-col h-full">
       <EditorToolbar />
-      <div className="flex-1">
+      <div className="flex-1 relative">
         <Editor
           height="100%"
           language={document?.language || 'javascript'}
@@ -161,6 +162,7 @@ export function CodeEditor() {
           onMount={handleEditorDidMount}
           loading={<div className="flex items-center justify-center h-full">Loading editor...</div>}
         />
+        <FloatingNewThreadButton />
       </div>
     </div>
   );
