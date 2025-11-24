@@ -1,31 +1,41 @@
 import React from 'react';
+import { toast } from 'sonner';
 import { useThreadStore } from '../../store/threadStore';
 import { useEditorStore } from '../../store/editorStore';
-import { THREAD_COLORS } from '../../config/constants';
 
 export function FloatingNewThreadButton() {
   const currentSelection = useEditorStore((state) => state.currentSelection);
-  const addThread = useThreadStore((state) => state.addThread);
-  const setActiveThread = useThreadStore((state) => state.setActiveThread);
+  const document = useEditorStore((state) => state.document);
+  const createThread = useThreadStore((state) => state.createThread);
   const threads = useThreadStore((state) => state.threads);
+  const activeThreadId = useThreadStore((state) => state.activeThreadId);
 
-  // Only show button when code is selected
-  if (!currentSelection) {
+  // Check if all threads are resolved (or no threads exist)
+  const allThreadsResolved = threads.length === 0 || threads.every(thread => thread.status === 'resolved');
+
+  // Show FAB only when:
+  // 1. Code is selected
+  // 2. No thread is currently active (user has "gone out" of thread)
+  // 3. All threads are resolved or no threads exist
+  if (!currentSelection || activeThreadId !== null || !allThreadsResolved) {
     return null;
   }
 
   const handleCreateThread = () => {
-    if (!currentSelection) return;
+    // Validate code is highlighted
+    if (!currentSelection) {
+      toast.error('Please highlight code to start a thread');
+      return;
+    }
 
-    // Create new thread from current selection
-    const colorIndex = threads.length % THREAD_COLORS.length;
-    const newThread = {
-      selection: currentSelection,
-      color: THREAD_COLORS[colorIndex],
-    };
+    // Validate document exists
+    if (!document) {
+      toast.error('No document is currently open');
+      return;
+    }
 
-    const threadId = addThread(newThread);
-    setActiveThread(threadId);
+    // Create new thread using store method
+    createThread(currentSelection, document.id);
   };
 
   return (
@@ -56,9 +66,6 @@ export function FloatingNewThreadButton() {
           d="M12 4v16m8-8H4"
         />
       </svg>
-
-      {/* Pulse animation ring */}
-      <span className="absolute inset-0 rounded-full bg-accent-primary opacity-75 animate-ping" />
     </button>
   );
 }
