@@ -9,7 +9,7 @@ import { MAX_MESSAGE_LENGTH } from '../../config/constants';
 
 // Throttle function for smooth streaming updates
 function createThrottle(delay: number) {
-  let timeoutId: NodeJS.Timeout | null = null;
+  let timeoutId: number | null = null;
   let lastArgs: any[] | null = null;
 
   const throttled = (func: Function, ...args: any[]) => {
@@ -78,6 +78,7 @@ export function ThreadInput({ threadId }: ThreadInputProps) {
 
     // Add user message
     addMessage(threadId, {
+      id: crypto.randomUUID(),
       threadId,
       role: 'user',
       content: userMessage,
@@ -157,6 +158,7 @@ export function ThreadInput({ threadId }: ThreadInputProps) {
 
     // Add user message
     addMessage(threadId, {
+      id: crypto.randomUUID(),
       threadId,
       role: 'user',
       content: userMessage,
