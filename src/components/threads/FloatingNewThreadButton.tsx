@@ -7,19 +7,6 @@ export function FloatingNewThreadButton() {
   const currentSelection = useEditorStore((state) => state.currentSelection);
   const document = useEditorStore((state) => state.document);
   const createThread = useThreadStore((state) => state.createThread);
-  const threads = useThreadStore((state) => state.threads);
-  const activeThreadId = useThreadStore((state) => state.activeThreadId);
-
-  // Check if all threads are resolved (or no threads exist)
-  const allThreadsResolved = threads.length === 0 || threads.every(thread => thread.status === 'resolved');
-
-  // Show FAB only when:
-  // 1. Code is selected
-  // 2. No thread is currently active (user has "gone out" of thread)
-  // 3. All threads are resolved or no threads exist
-  if (!currentSelection || activeThreadId !== null || !allThreadsResolved) {
-    return null;
-  }
 
   const handleCreateThread = () => {
     // Validate code is highlighted
@@ -41,7 +28,7 @@ export function FloatingNewThreadButton() {
   return (
     <button
       onClick={handleCreateThread}
-      className="fixed bottom-6 right-6 z-50
+      className="absolute bottom-6 right-6 z-50
                  w-14 h-14 rounded-full
                  bg-accent-primary hover:bg-blue-600
                  text-white shadow-lg hover:shadow-xl

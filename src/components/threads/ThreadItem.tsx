@@ -34,6 +34,16 @@ export function ThreadItem({ thread, expanded }: ThreadItemProps) {
     }
   };
 
+  const handleResolveClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    handleToggleResolve();
+  };
+
+  const handleDeleteClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    handleDelete();
+  };
+
   return (
     <div data-testid="thread-item" data-active={expanded} data-status={thread.status} data-color={`thread-${thread.colorIndex}`} className="p-4">
       {/* Thread Header */}
@@ -54,28 +64,26 @@ export function ThreadItem({ thread, expanded }: ThreadItemProps) {
           </span>
         )}
         <div className="flex-1" />
-        {expanded && (
-          <div className="flex gap-1">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleToggleResolve}
-              title={isResolved ? 'Reopen thread' : 'Resolve thread'}
-              aria-label={isResolved ? 'Reopen thread' : 'Resolve thread'}
-            >
-              {isResolved ? '↩' : '✓'}
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleDelete}
-              title="Delete thread"
-              aria-label="Delete thread"
-            >
-              🗑
-            </Button>
-          </div>
-        )}
+        <div className="flex gap-1">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={handleResolveClick}
+            title={isResolved ? 'Reopen thread' : 'Resolve thread'}
+            aria-label={isResolved ? 'Reopen thread' : 'Resolve thread'}
+          >
+            {isResolved ? '↩' : '✓'}
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={handleDeleteClick}
+            title="Delete thread"
+            aria-label="Delete thread"
+          >
+            🗑
+          </Button>
+        </div>
       </div>
 
       {/* Code Preview */}

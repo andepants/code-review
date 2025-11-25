@@ -3,7 +3,6 @@ import { useThreadStore } from '../../store/threadStore';
 import { useEditorStore } from '../../store/editorStore';
 import { ThreadItem } from './ThreadItem';
 import { NewThreadButton } from './NewThreadButton';
-import { FloatingNewThreadButton } from './FloatingNewThreadButton';
 import { Button } from '../ui/Button';
 
 export function ThreadPanel() {
@@ -87,9 +86,6 @@ export function ThreadPanel() {
           </div>
         )}
       </div>
-
-      {/* Floating Action Button - Always visible when code is selected */}
-      <FloatingNewThreadButton />
     </div>
   );
 }
