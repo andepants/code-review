@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import Editor, { Monaco } from '@monaco-editor/react';
 import { editor } from 'monaco-editor';
 import { useEditorStore } from '../../store/editorStore';
@@ -9,6 +9,8 @@ import { THREAD_COLORS } from '../../config/constants';
 import { detectLanguage } from '../../utils/languageDetection';
 import { EditorToolbar } from './EditorToolbar';
 import { FloatingNewThreadButton } from '../threads/FloatingNewThreadButton';
+// @ts-ignore
+import todoExample from '../../examples/javascript.jsx?raw';
 
 export function CodeEditor() {
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
@@ -28,7 +30,7 @@ export function CodeEditor() {
     if (!document) {
       setDocument({
         id: crypto.randomUUID(),
-        content: '',
+        content: todoExample,
         language: 'javascript',
         createdAt: new Date(),
         updatedAt: new Date(),
