@@ -23,6 +23,8 @@ I utilized **React** and **Vite** for a performant frontend, coupled with **Zust
 - Add support for different LLMs (besides Claude).
 - I would also implement a comprehensive testing suite with Vitest and add user authentication for data persistence across sessions.
 - I would also add agent web search to the code review process + get up-to-date documentation.
+- auto detect program language
+- custom llm/prompting for code review for specific business/language
 
 ## How you used AI tools (if applicable)
 
