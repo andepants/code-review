@@ -10,7 +10,7 @@ Run the following commands to install dependencies and start the local server:
 npm install
 npm run dev
 ```
-Or just go to the live link above
+Or just go to the live link above.
 
 > [!NOTE]
 > You need a Claude API key to run it locally. You can get it from [Anthropic Console](https://console.anthropic.com/settings/keys).
