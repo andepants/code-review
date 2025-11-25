@@ -25,6 +25,7 @@ I utilized **React** and **Vite** for a performant frontend, coupled with **Zust
 - I would also add agent web search to the code review process + get up-to-date documentation.
 - auto detect program language
 - custom llm/prompting for code review for specific business/language
+- add resizable bar between the two windows + closing right tab
 
 ## How you used AI tools (if applicable)
 
