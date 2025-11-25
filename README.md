@@ -1,118 +1,44 @@
 # AI-Powered Code Review Assistant
 
-A modern web application that enables developers to get AI-powered code review feedback on specific code selections using Anthropic's Claude AI.
+https://andepants.github.io/code-review/
 
-## Features
+**How to run it**
+Run `npm install` to install dependencies, then `npm run dev` to start the local server. Or just got to the live link above.
 
-✨ **Intelligent Code Review** - Get contextual feedback from Claude AI on selected code
-📝 **Multi-threaded Conversations** - Create and manage multiple independent review threads
-🎨 **Monaco Editor** - Industry-standard code editor with syntax highlighting
-🌊 **Streaming AI Responses** - Real-time streaming for immediate feedback
-🎯 **Context-Aware** - AI receives surrounding code context for better understanding
-🎨 **Dark Theme** - Beautiful dark theme optimized for developers
-💾 **Local Storage** - All data stays in your browser (privacy-first)
+You do need Claude API key to run it. You can get it from [claude](https://console.anthropic.com/settings/keys).
 
-## Tech Stack
+**Key architectural decisions**
+I utilized React and Vite for a performant frontend, coupled with Zustand for lightweight global state management. The Monaco Editor was integrated to mimic a professional IDE experience. Tailwind CSS was used for styling to maintain design consistency and development speed.
 
-- **Frontend**: React 18.3 + TypeScript 5.6
-- **Build Tool**: Vite 6.x
-- **Styling**: Tailwind CSS 3.4
-- **Code Editor**: Monaco Editor 0.52 (VSCode engine)
-- **State Management**: Zustand 5.0
-- **AI Integration**: Anthropic Claude 3.5 Sonnet via official SDK
-- **Type Safety**: Strict TypeScript mode enabled
+**What you'd do differently with more time**
+- I would build a dedicated backend service to proxy API calls, ensuring API keys remain secure (aws lambda or firebase functions)
+- Add suppport for different LLMS (besides Claude)
+- I would also implement a comprehensive testing suite with Vitest and add user authentication for data persistence across sessions.
+- I would also add agent web search to the code review process + get up to date documentation (context7).
 
-## Getting Started
+**How you used AI tools (if applicable)**
+*What you used AI for*
+- I leveraged AI (Claude Code Desktop) to generate a comprehensive PRD -> used [BMAD methodology](https://github.com/bmad-code-org/BMAD-METHOD?tab=readme-ov-file) to generate architecture, ux design, and sharding the PRD into Epics -> Stories -> Tasks.
+- I use [Serena](https://github.com/oraios/serena) for semantic code retrieval + editing = faster llm code parsing in claude code.
+- I started using AntiGravity as my new IDE for more UI changes in tandem w/ Claude Code.
+- Then used custom AI Agents in Claude Code to execute + review code.
 
-### Prerequisites
+*How you verified or adapted its suggestions*
+I manually reviewed all generated code, testing it in the browser to ensure it met requirements. I bug test, and confirm UX flow, and make corresponding changes.
 
-- Node.js >= 18.0.0
-- npm >= 9.0.0
-- Anthropic API key ([Get one here](https://console.anthropic.com/))
+*What worked well and what didn't*
+- Strengths
+    1. Iterating fast
+    2. planning
+    3. coming up with ideas/alternatives.
+    4. parsing through files
+- Limitations
+    1. Without proper guard rails, it can start implementing or downloading files or setting up things you don’t want. Or break your app.
+    2. High level understanding of the codebase
+    3. resolving bugs without clear direction
+    4. managing context
+    5. getting into the same debugging loops
+    6. critical thinking
 
-### Installation
-
-1. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-2. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-
-   Edit `.env.local` and add your Anthropic API key:
-   ```
-   VITE_ANTHROPIC_API_KEY=sk-ant-your-key-here
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-   Open http://localhost:5173 in your browser.
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-The optimized build will be in the `dist/` directory.
-
-Preview the production build locally:
-```bash
-npm run preview
-```
-
-## Usage
-
-### Basic Workflow
-
-1. **Paste or type code** into the Monaco editor
-2. **Select lines** you want to review by clicking line numbers (hold Shift to select multiple)
-3. **Click "Ask AI"** button that appears in the thread panel
-4. **Type your question** about the selected code
-5. **Get streaming AI feedback** with suggestions and improvements
-6. **Continue conversation** with follow-up questions
-
-### Thread Management
-
-- **Create threads** on specific code ranges
-- **Multiple threads** - Up to 50 independent threads
-- **Color-coded** - 8 distinct colors for easy identification
-- **Resolve threads** - Mark conversations as complete
-- **Delete threads** - Remove threads you no longer need
-
-## Configuration
-
-Access settings via the ⚙️ icon in the header:
-
-- **API Key**: Your Anthropic API key
-- **Font Size**: 10-24px (default: 14px)
-- **Context Lines**: 5-50 lines (default: 10)
-
-Settings are persisted in browser localStorage.
-
-## Security Considerations
-
-⚠️ **Important**: This is a client-side application. API keys are stored in your browser and should be **your personal keys only**, not shared team keys.
-
-## Architecture
-
-This application follows the architecture defined in `docs/architecture.md`:
-
-- **Component-Based**: Modular React components
-- **Type-Safe**: Complete TypeScript coverage
-- **State Management**: Zustand stores for editor, threads, and configuration
-- **AI Service Layer**: Abstracted Anthropic API client with streaming
-
-## License
-
-MIT License
-
----
-
-**Note**: This application was implemented as part of the BMad Method demonstration, showcasing AI-assisted software development.
+**Trade-offs you made**
+- I opted for client-side API key storage to simplify deployment. Only deployed to GitHub Pages for simplicity. If I were to deploy to a production environment, I would use a backend service to proxy API calls, ensuring API keys remain secure, MVP would most likely be a serverless function (Lambda or Firebase Fucntions).
