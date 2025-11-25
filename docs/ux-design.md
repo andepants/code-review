@@ -1,1 +1,1 @@
-/Users/andre/coding/automattic/docs/ux-design-specification.md
+ux-design-specification.md
